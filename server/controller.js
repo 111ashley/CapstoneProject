@@ -49,7 +49,21 @@ const items = [
 
 ]
 
+const wantedList = []
+
 module.exports = {
     getItems: (req, res) => res.status(200).send(items),
+
+    addToWantedList:(req, res) => {
+        const {id} = req.body;
+        if(wantedList.some((product) => product.id === id)){
+                    return res.status(500).send("Item already in list!")
+                } 
+                // console.log(id);
+                const product = items.find((item) => item.id === id)
+                // console.log(product)
+                wantedList.push(product);
+                return res.status(200).send(product)
+    } 
 
 }

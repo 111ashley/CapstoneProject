@@ -3,6 +3,7 @@ const itemsCallback = ({ data: items }) => displayItems(items)
 const errCallback = err => console.log(err)
 const form = document.querySelector('form')
 const itemsContainer = document.querySelector('#items-container')
+const wantedContainer = document.querySelector('#wanted-container')
 
 
 
@@ -16,8 +17,6 @@ displayItems(res.data);
 })
 .catch((err) => console.log(err));
  };
-
-
 
 let choices = []
 let userList = []
@@ -55,15 +54,37 @@ function displayItems(arr) {
 
 getItems();
 
+function createWantedCard(item){
+    console.log(item)
+    const itemCard = document.createElement('div')
+    itemCard.classList.add('item-card')
+    itemCard.innerHTML = `<img alt='${item.name}' src=${item.imgURL} class="item-image"/>
+    <p class="name" style="color:#fff;">${item.name}</p> 
+    <p class="price" style="color:#fff;">${item.price}</p>
+    <button class="item-btn" style="background-color:#83D0CB; border: solid 2px #000; font-family: Carbon;" onclick="removeFromList(${item.id})">REMOVE FROM LIST</button>
+    `
+    wantedContainer.appendChild(itemCard)
+}
+
+function addToList(id){
+    const data = { 
+        id:id
+    }
+    axios.post(`${baseURL}/api/wantedlist/add`, data).then((res)=>{
+        console.log(res.data);
+        createWantedCard(res.data);
+    })
+
+}
 
 // WANTED LIST ARRAY
-// let list = [];
+let list = [];
 
 // // // // // ADD TO LIST 
 
 // function addToList(id){
 //     // check if item already exists in user's wanted list
-//     if(list.some((product) => product.id === id)){
+//  if(list.some((product) => product.id === id)){
 //         alert("Item already in list!")
 //     } else{
 //     // console.log(id);
@@ -85,10 +106,10 @@ getItems();
 // addToList();
 
 // // update list
-// function updateList(){
-//     renderListItems();
+function updateList(){
+    renderListItems();
 
-// }
+}
 
 // // render list items
 // function renderListItems(){
