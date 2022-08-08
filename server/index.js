@@ -1,3 +1,4 @@
+const path = require('path')
 const express = require("express");
 const cors = require("cors");
 const baseURL = "https://localhost:4444"
@@ -7,6 +8,11 @@ const{getItems} = require('./controller.js')
 app.use(cors());
 
 app.use(express.json());
+
+app.use(express.static(path.join(__dirname, "./../public")));
+app.get('/', function(req, res) {
+    res.sendFile(path.join(__dirname, '../public/home.html'))
+})
 
 // app.get('/api/items', (req, res) => {
 //     try {
