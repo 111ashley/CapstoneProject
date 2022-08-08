@@ -4,7 +4,7 @@ const cors = require("cors");
 const baseURL = "https://localhost:4444"
 const app = express();
 const port = 4444
-const{getItems, addToWantedList} = require('./controller.js')
+const{getItems, addToWantedList, removeFromWantedList} = require('./controller.js')
 app.use(cors());
 
 app.use(express.json());
@@ -29,6 +29,7 @@ app.get('/node_modules/axios/dist/axios.min.js', function(req, res){
 
 app.get(`/api/items`, getItems)
 app.post(`/api/wantedlist/add`, addToWantedList)
+app.delete (`/api/wantedlist/remove`,removeFromWantedList)
 
 
 

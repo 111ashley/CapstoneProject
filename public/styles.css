@@ -218,7 +218,8 @@ body.wishlist{
 font-size: 3em;
 display: inline-block;
 color: #fff;
-text-align: center;}
+text-align: center;
+}
 
 #span::first-letter{
 	font-family: seeingstars;
@@ -228,12 +229,33 @@ text-align: center;}
 #items-container {
 	/* margin-bottom: -460px;
 	margin-top: -30px;  */
-    display: flex;
-    align-items: left;
+	margin: auto;
 	height: 100%;
-
+	margin: auto;
+    display: flex;
+    align-items: center;
+	justify-content: center;
   }
+  #wanted-container {
+	/* margin-bottom: -460px;
+	margin-top: -30px;  */
+	margin: auto;
+	height: 100%;
+    display: flex;
+    align-items: center;
+	justify-content: center;
+}
 
+/* #list-header {
+	align-items: center;
+	justify-content: center;
+} */
+
+.header{
+	margin-top: 20px;
+	margin-bottom: 10px;
+	font-size: 2em;
+}
 /* STYLING FOR ITEM CARDS */
 
   .item-image {

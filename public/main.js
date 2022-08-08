@@ -13,7 +13,6 @@ const getItems = () => {
 .then((res) => {
 console.log(res.data);
 displayItems(res.data);
-// addToList(res.data);
 })
 .catch((err) => console.log(err));
  };
@@ -67,14 +66,28 @@ function createWantedCard(item){
 }
 
 function addToList(id){
+    // sending data from the front-end to the back-end
     const data = { 
         id:id
     }
+    // once item id is found, a new card for that item will be created for the wanted list
     axios.post(`${baseURL}/api/wantedlist/add`, data).then((res)=>{
         console.log(res.data);
         createWantedCard(res.data);
     })
+}
 
+// REMOVE ITEMS FROM LIST
+function removeFromList(id){
+    const data ={
+        id:id
+    }
+    axios.delete(`${baseURL}/api/wantedlist/remove`, data)
+    .then((res)=>{
+            wantedContainer.innerHTML = ``
+            console.log(res.data)
+        })
+        .catch(err => console.log(err))       
 }
 
 // WANTED LIST ARRAY
@@ -106,10 +119,21 @@ let list = [];
 // addToList();
 
 // // update list
-function updateList(){
-    renderListItems();
+// function updateList(){
+//     renderListItems();
 
-}
+// }
+// //////// NEW LINES OF CODE /////////
+
+// function renderListItems(){
+//     wantedContainer.innerHTML = ""; //clear list element
+//     wantedList.forEach((item)=> {
+//         wantedContainer.innerHTML += `<img alt='${item.name}' src=${item.imgURL} class="item-image"/>
+//         <p class="name" style="color:#fff;">${item.name}</p> 
+//         <p class="price" style="color:#fff;">${item.price}</p>
+//         <button class="item-btn" style="background-color:#83D0CB; border: solid 2px #000; font-family: Carbon;" onclick="removeFromList(${item.id})">REMOVE FROM LIST</button>
+//         `})
+// }
 
 // // render list items
 // function renderListItems(){
@@ -120,50 +144,7 @@ function updateList(){
 // end of this code
 
 
-// const itemBtn = document.getElementById("item-btn")
-// const getItem = () => {
-//     axios.get("http://localhost:4444/api/item/")
-//     .then(res => {
-//         const data = res.data;
-//         alert(data);
-//     });
-// };
 
-// itemBtn.addEventListener('click', getItems)
-
-// function createUserItemCard(item){
-//     const itemCard = document.createElement('div')
-//     itemCard.classList.add('item-card')
-//     itemCard.innerHTML = `<img alt='${item.name}' src=${item.imgURL} class="item-image"/>
-//     <p class="name" style="color:#fff;">${item.name}</p> 
-//     <p class="price" style="color:#fff;">${item.price}</p>
-//     <button class="item-btn" style="background-color:#83D0CB; border: solid 2px #000" onclick="putItemBack(${item.id}")">REMOVE FROM LIST</button>
-//     `
-//     itemsContainer.appendChild(itemCard)
-// }
-
-
-
-// const itemBtn = document.getElementById("item-btn")
-// console.log("Button Was Clicked!")
-// const getItem = () =>{
-//     axios.get("http://localhost:4444/api/items")
-//     .then(res => {
-//         const data = res.data;
-//         alert (data);
-//     })
-// }
-// itemBtn.addEventListener('click', getItem)
-
-// (function(){
-//     const itemBtn = document.querySelectorAll(".item-btn")
-//     itemBtn.forEach(function(btn){
-//         btn.addEventListener('click',function(event){
-//             console.log(event.target)
-//         })
-//     })
-
-// })();
 
 
 

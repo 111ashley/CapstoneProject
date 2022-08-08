@@ -64,6 +64,16 @@ module.exports = {
                 // console.log(product)
                 wantedList.push(product);
                 return res.status(200).send(product)
-    } 
+    } ,
 
+    removeFromWantedList: (req, res) => {
+        const {id} = req.params;
+        const index = items.findIndex((item) => item.id === id)
+        if(index !== -1){
+            res.status(400).send("item not found")
+        } else {
+            wantedList.splice(index,1)
+            res.status(200).send(items)
+        }
+      }
 }
