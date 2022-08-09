@@ -62,6 +62,7 @@ function createWantedCard(item){
     <p class="price" style="color:#fff;">${item.price}</p>
     <button class="item-btn" style="background-color:#83D0CB; border: solid 2px #000; font-family: Carbon;" onclick="removeFromList(${item.id})">REMOVE FROM LIST</button>
     `
+    itemCard.setAttribute("id", `item-card-${item.id}`)
     wantedContainer.appendChild(itemCard)
 }
 
@@ -84,7 +85,7 @@ function removeFromList(id){
     }
     axios.delete(`${baseURL}/api/wantedlist/remove`, data)
     .then((res)=>{
-            wantedContainer.innerHTML = ``
+            document.getElementById(`item-card-${id}`).remove()
             console.log(res.data)
         })
         .catch(err => console.log(err))       

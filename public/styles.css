@@ -227,29 +227,22 @@ text-align: center;
 
 /* STYLING FOR ITEM CARDS CONTAINER */
 #items-container {
-	/* margin-bottom: -460px;
-	margin-top: -30px;  */
 	margin: auto;
 	height: 100%;
-	margin: auto;
     display: flex;
+	/* flex-direction: column; <---- makes items show up one line each. without flex-direction and flex-wrap, items will show up in one row */
     align-items: center;
 	justify-content: center;
+	/* causes items to show in even divisions  */
+	flex-wrap: wrap;
   }
   #wanted-container {
-	/* margin-bottom: -460px;
-	margin-top: -30px;  */
 	margin: auto;
 	height: 100%;
     display: flex;
     align-items: center;
 	justify-content: center;
 }
-
-/* #list-header {
-	align-items: center;
-	justify-content: center;
-} */
 
 .header{
 	margin-top: 20px;
@@ -257,11 +250,30 @@ text-align: center;
 	font-size: 2em;
 }
 /* STYLING FOR ITEM CARDS */
+.item-card {
+	/* border: solid 3px #55ADED; */
+    background-color: transparent;
+	background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.8));
+    width: 300px;
+    margin: 10px; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+	border-bottom-left-radius: 8px;
+	border-top-right-radius: 8px;
+	border-top-left-radius: 8px;
+	border-bottom-right-radius: 8px;
+	padding: 1%;
+	/* display: inline-flex; */
+	/* overflow: auto; */
+  }
 
   .item-image {
     width: 200px; 
     height: 300px;	
 	line-height: 13px;
+	object-fit: contain;
+
   }
   .name{
 	font-family: Carbon;
@@ -277,23 +289,7 @@ text-align: center;
 	text-transform:uppercase;
 	text-align: center;
   }
-  .item-card {
-	/* border: solid 3px #55ADED; */
-    background-color: transparent;
-	background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.8));
-    width: 500px;
-    margin: 10px; 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-	border-bottom-left-radius: 8px;
-	border-top-right-radius: 8px;
-	border-top-left-radius: 8px;
-	border-bottom-right-radius: 8px;
-	padding: 2%;
-	/* display: inline-flex; */
-	/* overflow: auto; */
-  }
+
 .item-btn{
 	display: flex;
 	align-items: center;
