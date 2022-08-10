@@ -52,8 +52,8 @@ const items = [
     },
     {
         id: 8,
-        name: 'Sapphire Necklace',
-        imgURL: 'https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/362b8e31-4875-459f-a8f9-8a19b6326819/d99tf1f-c037270b-4ea8-471e-9aa5-d6159f98219d.png/v1/fill/w_1024,h_907,strp/sapphire_diamond_necklace_by_lokilanie_d99tf1f-fullview.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9OTA3IiwicGF0aCI6IlwvZlwvMzYyYjhlMzEtNDg3NS00NTlmLWE4ZjktOGExOWI2MzI2ODE5XC9kOTl0ZjFmLWMwMzcyNzBiLTRlYTgtNDcxZS05YWE1LWQ2MTU5Zjk4MjE5ZC5wbmciLCJ3aWR0aCI6Ijw9MTAyNCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.LY2xLVBfHsE3NahZRManCMMhot-f7x-FLYtla9yvOTc',
+        name: 'Diamond Necklace',
+        imgURL: 'https://cdn.shopify.com/s/files/1/0252/8372/3345/products/RadiantHeartSet_1_800x.png?v=1609032042',
         price: '$15,000'
     },
     {
@@ -78,9 +78,9 @@ const items = [
     },
     {
         id: 12,
-        name: 'Travis Scott Dunk Low',
-        imgURL: 'https://image.goat.com/1000/attachments/product_template_pictures/images/032/437/341/original/585882_00.png.png',
-        price:'$2,100'
+        name: 'Cologne',
+        imgURL: 'https://media.ulta.com/i/ulta/2534072?w=659&h=659',
+        price: '$80'
     },
     {
         id: 13,
@@ -90,17 +90,16 @@ const items = [
     },
     {
         id: 14,
-        name: 'Cologne',
-        imgURL: 'https://media.ulta.com/i/ulta/2534072?w=659&h=659',
-        price: '$80'
-    },
-    {
-        id: 15,
         name: 'RIMOWA Suitcase',
         imgURL: 'https://images.prestigeonline.com/wp-content/uploads/sites/8/2021/03/30184555/Original_Cabin_Mars_1-1024x1024.png',
         price: '$10,000'
     },
-    
+    {
+        id: 15,
+        name: 'Travis Scott Dunk Low',
+        imgURL: 'https://image.goat.com/1000/attachments/product_template_pictures/images/032/437/341/original/585882_00.png.png',
+        price:'$2,100'
+    },
     {
         id: 16,
         name: 'Motorcycle',
@@ -166,15 +165,75 @@ const items = [
         name: 'Dior Bag',
         imgURL: 'https://api.platforme.com/api/compose?brand=dior&model=book_tote&version=269&p=base:embroidery:m1286zriwm928&size=718&initials=&logic=1',
         price: '$3,000'
+    },
+    {
+        id: 27,
+        name: 'Dress',
+        imgURL: 'https://cdn.theninesfashion.com/wp-content/uploads/2022/06/B1-Pink-Ophelia-Georgette-Cutout-Midi-Dress-House-of-CB.png',
+        price: '$250'
+    },
+    {
+        id: 28,
+        name: 'Canon Camera',
+        imgURL: 'https://www.camera.ie/custom/public/images/.gallery4x3/canon-g7x.png',
+        price: '$620'
+    },
+    {
+        id: 29,
+        name: 'Carharrt Hat',
+        imgURL: 'https://eliteinkprinting.com/wp-content/uploads/2020/11/CT100289.png',
+        price: '$80'
+    },
+    {
+        id: 30,
+        name: 'ATV',
+        imgURL: 'https://www.brp-world.com/content/brp-world/en_int/brands/can-am-off-road/experience/all-terrain-vehicles/_jcr_content/root/helperblock_14728411.coreimg.png/1628896171183/orv-atv-my22-can-am-outlander-xt-570-oxford-blue-sku0002una00-34fr-na.png?imwidth=2048',
+        price: '$1,300'
+    },
+    {
+        id: 31,
+        name: 'Bracelet',
+        imgURL: 'https://www.harpersbazaararabia.com/public/styles/square/public/images/2018/12/19/1793308.png.adapt.535.535.png?DI5roSCR',
+        price: '$500'
+    },
+    {
+        id: 32, 
+        name:'Baby Clothes',
+        imgURL: 'https://static.nike.com/a/images/t_default/d94e427f-8acf-446b-a111-8dbb8a992668/summer-daze-3-piece-box-set-3-piece-set-FK1mTq.png',
+        price: '$70'
+    },
+    {
+        id: 33,
+        name: 'Baby Crib',
+        imgURL: 'http://cdn.shopify.com/s/files/1/0556/3993/3118/products/w6jhqezuhitwnfmqdsyt_4c08a419-8a2a-4bb3-8cbb-f0a193e3f1a7.png?v=1655235400',
+        price: '$200'
+    },
+    {
+        id: 34,
+        name: 'Golf Club Set',
+        imgURL: 'https://hips.hearstapps.com/vader-prod.s3.amazonaws.com/1614712606-juniors-2018-xt-10-piece-set_2___2.png',
+        price: '$150'
+    },
+    {
+        id: 35,
+        name: 'Dinner-ware Set',
+        imgURL: 'https://www.decorist.com/static/cache-thumbnail/b2/2b/b22bd3ecc48d7da3cd029e283299563e.png',
+        price: '$190'
+    },
+    {
+        id: 36,
+        name: 'Bedding Set',
+        imgURL: 'https://d2b8wt72ktn9a2.cloudfront.net/mediocre/image/upload/c_pad,f_auto,dpr_2.0,h_368,q_auto,w_368/mjpbems5vqyu7pho2izl.png',
+        price: '$200'
     }
-    
 ]
 
 const wantedList = []
+const dates = []
 
 module.exports = {
     getItems: (req, res) => res.status(200).send(items),
-
+    getList: (req, res) => res.status(200).send(wantedList),
     addToWantedList:(req, res) => {
         const {id} = req.body;
         if(wantedList.some((product) => product.id === id)){
@@ -196,5 +255,18 @@ module.exports = {
             wantedList.splice(index,1)
             res.status(200).send(items)
         }
+      },
+
+      postDate: (req, res) => {
+        const { occassion, date } = req.body;
+        const newDate = {
+          id: globalId,
+          occassion,
+          date,
+        }
+        dates.push(newDate)
+        res.status(200).send(dates)
+        globalId++
+        
       }
 }

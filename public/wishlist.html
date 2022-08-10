@@ -18,12 +18,68 @@
    <script> src= "https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" </script> -->
   <!-- UIkit CSS -->
  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.15.1/dist/css/uikit.min.css" />   -->
-<link href="styles.css" rel="stylesheet">
+  <!-- <script src="https://kit.fontawesome.com/27af07be7d.js" crossorigin="anonymous"></script> -->
+  <link href="styles.css" rel="stylesheet">
 </head>
 
 <body class="wishlist">
+    <!-- <div class="container" id="main-container">
+        <nav class="navbar">
+            <ul>
+                <li><a href="#browse">BROWSE</a></li>
+                <li><a href="#want">WANTED</a></li>
+                <li><a href="#dates"></a>IMPORTANT DATES</li>
+            </ul>
+        </nav> -->
+        <!-- style="position: sticky; top: 0;" -->
+<section >
 <header>
+    <div class="topnav" 
+    style="
+    display: grid;
+    justify-items: left;
+    font-size: 50px;
+    font-weight: bold;">
     <nav>
+        <ul id="primary-navigation" class="primary-navigation flex" 
+        style="width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        box-sizing: border-box;
+        padding: 20px;
+        background: transparent;">
+            <li class="active" 
+            style="list-style: none;
+            margin-right: 20px;
+            font-size: 25px;
+            font-weight: bold;">
+                <a href="#browse" style="font-family: Carbon; color:#fff; text-decoration: none; font-size: 1.2em;">
+                    <span class="nav-span" aria-hidden="true" style="font-family:seeingstars;color:#477ADF; text-decoration: none; font-size: 1em;">O</span>BROWSE
+                </a>
+            </li>    
+            <li style="list-style: none;
+            margin-right: 20px;
+            font-size: 25px;
+            font-weight: bold;">
+                <a href="#want" style="font-family:Carbon; color:#fff; text-decoration: none; font-size: 1.2em; ">
+                    <span class="nav-span" aria-hidden="true" style="font-family:seeingstars;color:#477ADF; text-decoration: none; font-size: 1 em;">O</span>WANTED
+                </a>
+            </li>
+            <li style="list-style: none;
+            margin-right: 20px;
+            font-size: 25px;
+            font-weight: bold;">
+                <a href="#dates" style="font-family:Carbon; color:#fff; text-decoration: none; font-size: 1.2em; ">
+                    <span class="nav-span" aria-hidden="true" style="font-family:seeingstars;color:#477ADF; text-decoration: none; font-size: 1 em;">O</span>DATES
+                </a>
+            </li>
+        </ul>
+        <!-- <a href="#browse">BROWSE</a>
+        <a href="#want">WANTED</a>
+        <a href="#dates">DATES</a> -->
+    </nav>
+    </div>
+    <!-- <nav>
         <ul id="primary-navigation" class="primary-navigation flex">
             <li class="active">
                 <a href="home.html" style="font-family: Carbon; color:#fff; text-decoration: none; font-size: 1.2em;">
@@ -36,7 +92,7 @@
                 </a>
             </li>
         </ul>
-    </nav>
+    </nav> -->
     
     <div class="text-align-container text-align-container-style">
         <div class="logo">
@@ -44,6 +100,7 @@
         </div>
     </div>
 </header>
+</section>
 <!-- <div class="navbar">
 <div class="text-align-container text-align-container-style">
     <div class="logo">
@@ -56,76 +113,7 @@
 </div> -->
 
        <!-- UIKit Slider -->
-       <!-- <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slider>
-
-        <ul class="uk-slider-items uk-child-width-1-2 uk-child-width-1-3@m uk-grid">
-            <li>
-                <div class="uk-panel">
-                    <img src="images/slider1.jpg" width="400" height="600" alt="">
-                    <div class="uk-position-center uk-panel"><h1>1</h1></div>
-                </div>
-            </li>
-            <li>
-                <div class="uk-panel">
-                    <img src="images/slider2.jpg" width="400" height="600" alt="">
-                    <div class="uk-position-center uk-panel"><h1>2</h1></div>
-                </div>
-            </li>
-            <li>
-                <div class="uk-panel">
-                    <img src="images/slider3.jpg" width="400" height="600" alt="">
-                    <div class="uk-position-center uk-panel"><h1>3</h1></div>
-                </div>
-            </li>
-            <li>
-                <div class="uk-panel">
-                    <img src="images/slider4.jpg" width="400" height="600" alt="">
-                    <div class="uk-position-center uk-panel"><h1>4</h1></div>
-                </div>
-            </li>
-            <li>
-                <div class="uk-panel">
-                    <img src="images/slider5.jpg" width="400" height="600" alt="">
-                    <div class="uk-position-center uk-panel"><h1>5</h1></div>
-                </div>
-            </li>
-            <li>
-                <div class="uk-panel">
-                    <img src="images/slider1.jpg" width="400" height="600" alt="">
-                    <div class="uk-position-center uk-panel"><h1>6</h1></div>
-                </div>
-            </li>
-            <li>
-                <div class="uk-panel">
-                    <img src="images/slider2.jpg" width="400" height="600" alt="">
-                    <div class="uk-position-center uk-panel"><h1>7</h1></div>
-                </div>
-            </li>
-            <li>
-                <div class="uk-panel">
-                    <img src="images/slider3.jpg" width="400" height="600" alt="">
-                    <div class="uk-position-center uk-panel"><h1>8</h1></div>
-                </div>
-            </li>
-            <li>
-                <div class="uk-panel">
-                    <img src="images/slider4.jpg" width="400" height="600" alt="">
-                    <div class="uk-position-center uk-panel"><h1>9</h1></div>
-                </div>
-            </li>
-            <li>
-                <div class="uk-panel">
-                    <img src="images/slider5.jpg" width="400" height="600" alt="">
-                    <div class="uk-position-center uk-panel"><h1>10</h1></div>
-                </div>
-            </li>
-        </ul>
     
-        <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slider-item="previous"></a>
-        <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slider-item="next"></a>
-    
-    </div> -->
-
       <!-- End of slider -->
       
 
@@ -142,40 +130,69 @@
        <div id="choices" class="container"></div>
    </section> -->
    <!-- IF I DELETE THIS HEADER, MY CARDS DISAPPEAR FROM MY CONTAINER -->
+<div class="box 1" id="browse">
    <h2 class="header" style="text-align: center; color:#fff; font-family: AstralDelight;">BROWSE ITEMS</h2>
    <div>
    <section class="container" id="items-container" style="background-color: transparent; border:solid 3px #55ADED; width:100%; margin-top: -2px;">
    <!-- <section>
     <h2 id="browse-header" style="text-align:center; color:#55ADED;">BROWSE ITEMS</h2>
     </section> -->
+   </div>
 </div>
 
    <!-- Test Browse Items Title -->
    <!-- <div class="text-center">
             <h2 class="display-7" style="text-align: center;color:#55ADED; text-shadow: 0 0 5px #000 ">BROWSE ITEMS</h2>
         </div> -->
+<div class="box 2" id="want"> 
     <h2 class="header" style="text-align: center; color:#fff; font-family: AstralDelight;">WANTED LIST</h2>
     <div>
     <section class="container" id="wanted-container" style="background-color: transparent; border:solid 3px #477ADF; width:100%; margin-top: -2px ;"> 
-    <!-- <div class="list"> -->
-        <!-- <div class="list-header">
-            <h2 style="text-align:center; color:#fff; font-family: AstralDelight; font-size: 2rem; padding-top: 2%;">WANTED LIST</h2> -->
-            <!-- <div class ="column1" style="color:#55ADED">ITEM</div>
-            <div class="column2" style="color:#55ADED">RANKING</div> -->
-        <!-- </div> -->
-      
-        <!-- <div id="user-list" class="container" style="background-color: transparent;"></div> -->
-    <!-- </div> -->
-</section>  
-</div>
+    </section>  
+    </div>
+</div> 
+
+<div id="dates"> 
+    <h2 class="header" style="text-align: center; color:#fff; font-family: AstralDelight;">IMPORTANT DATES</h2>
+    <div>
+    <section class="container" id="dates-container" style="background-color: transparent; width:100%; margin-top: -2px ;"> 
+        <form style="border: solid 3px #477ADF; padding: 2%;">
+            <input
+              type="text"
+              id="occassion"
+              placeholder="WHAT'S THE OCCASSION?"/>
+            <input
+              type="text"
+              id="date"
+              placeholder="WHAT'S THE DATE?"/>
+            <button class="add-date-btn" style="background-color:#83D0CB; border: solid 2px #000; font-family: Carbon; align-items: center;">ADD DATE</button>
+          </form>
+    </section>  
+    </div>
+</div>    
+<!-- </div> -->
+   <!-- <script>
+    // const likeBtn = document.getElementById('like-btn');
+
+    // function toggle(){
+    //     if(likeBtn.style.color =="red"){
+    //         likeBtn.style.color = "grey"
+    //     }
+    //     else{
+    //         likeBtn.style.color = "red"
+    //     }
+    // }
+ </script> -->
+
+    <!-- <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script> -->
 
    <script src="../node_modules/axios/dist/axios.min.js"></script>
    <script src="./main.js"></script>
    <!-- UIkit JS -->
-<script src="https://cdn.jsdelivr.net/npm/uikit@3.15.1/dist/js/uikit.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/uikit@3.15.1/dist/js/uikit-icons.min.js"></script>
+
+   <!-- <script src="https://cdn.jsdelivr.net/npm/uikit@3.15.1/dist/js/uikit.min.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/uikit@3.15.1/dist/js/uikit-icons.min.js"></script> -->
    
-   
- 
 </body>
 </html>
