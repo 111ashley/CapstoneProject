@@ -229,18 +229,20 @@ const items = [
 ]
 
 const wantedList = []
-const dates = []
+const events = []
 
 module.exports = {
     getItems: (req, res) => res.status(200).send(items),
     getList: (req, res) => res.status(200).send(wantedList),
+    getEvent: (req, res) => res.status(200).send(events),
+
     addToWantedList:(req, res) => {
         const {id} = req.body;
-        if(wantedList.some((product) => product.id === id)){
+        if(wantedList.some((product) => product.id === +id)){
                     return res.status(500).send("Item already in list!")
                 } 
                 // console.log(id);
-                const product = items.find((item) => item.id === id)
+                const product = items.find((item) => item.id === +id)
                 // console.log(product)
                 wantedList.push(product);
                 return res.status(200).send(product)
@@ -248,8 +250,8 @@ module.exports = {
 
     removeFromWantedList: (req, res) => {
         const {id} = req.params;
-        const index = items.findIndex((item) => item.id === id)
-        if(index !== -1){
+        const index = items.findIndex((item) => item.id === +id)
+        if(index === -1){
             res.status(400).send("item not found")
         } else {
             wantedList.splice(index,1)
@@ -257,15 +259,15 @@ module.exports = {
         }
       },
 
-      postDate: (req, res) => {
+      postEvent: (req, res) => {
         const { occassion, date } = req.body;
         const newDate = {
-          id: globalId,
+          id ,
           occassion,
           date,
         }
-        dates.push(newDate)
-        res.status(200).send(dates)
+        events.push(newDate)
+        res.status(200).send(events)
         globalId++
         
       }

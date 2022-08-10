@@ -1,4 +1,3 @@
-
 *{	padding: 0;
     margin: 0;
 	font-family: 'Inter';
@@ -31,31 +30,7 @@ ol {
 	align-items: center;
 }
 
-/* .navbar {
-	overflow: hidden;
-	background-color: #222;
-	position: fixed;
-	top: 0;
-	width: 100%;
-  }
-
-  .navbar a {
-	float: left;
-	display: block;
-	color: #f2f2f2;
-	text-align: center;
-	padding: 14px 16px;
-	text-decoration: none;
-	transition-duration: 0.25s;
-  }
-
-  .navbar a:hover {
-	background: #ccc;
-	color: black;
-  } */
-
 /* BEGINNING OF HOME STYLING */
-
 
 body.home{
 	background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.8)), url('https://i.ytimg.com/vi/iqA5o9bn4SQ/maxresdefault.jpg');
@@ -91,8 +66,8 @@ h3{
 	position: absolute;
 	top: 100px;
 	left: 40px;
-	transition: 0.5s;
-	
+	transition: 0.5s;	
+	/* border: solid 2px #348756; */
 }
 
 form input{
@@ -122,11 +97,12 @@ form button {
 	margin: 0 10px;
 	background: linear-gradient(to right,#83D0CB,#348756);
 	border-radius: 30px;
-	border: 0;
+	border: solid 1px;
 	outline: none;
 	color: #000;
 	cursor: pointer;
 	text-align: center;
+	margin-top: 30px;
 
 }
 
@@ -146,6 +122,7 @@ form button {
 	align-items: center;
 	box-shadow: 0 -1px 5px -1px #000;
 	position: relative;
+	border-bottom: solid 1px #000;
 }
 
 .step-col{ 
@@ -172,7 +149,6 @@ form button {
 	right: -20px;
 	top: 0;
 	border-left: 20px solid #348756;
-
 }
 /* END OF HOME STYLING */
 
@@ -207,7 +183,8 @@ text-align: center;
 	font-family: seeingstars;
 }
 .topnav{
-	position: sticky; top: 0;
+	position: fixed;
+	z-index: 1;
 }
 /* STYLING FOR ITEM CARDS CONTAINER */
 #items-container {
@@ -342,8 +319,6 @@ form.add-date-btn{
 	background: linear-gradient(45deg, #ad27ad, #26A9E0, #82f057, #e3f057);
 
 } */
-
-
 .slider{
 	position: absolute;
 	top: 20%;
@@ -353,7 +328,6 @@ form.add-date-btn{
 	border-radius: 25px;
 	overflow: hidden;
 }
-
 .image img{
 	height: 100%;
 	width: 100%;
@@ -361,46 +335,6 @@ form.add-date-btn{
 	box-sizing: border-box
 
 }
-
-/* .home-item{
-	border:solid 3px #000;
-}
-.container py5{
-	border:solid 3px #000;
-}
-.display-7{
-	border:solid 3px #000;
-} */
-
-/* .card{
-	border: none;
-	border-radius: 8px;
-	background-color: #145277;
-}
-
-.text1{
-	font-size: 13;
-	color: #83D0CB
-
-}
-
-.info{
-	line-height: 13px;
-}
-
-.price span{
-	color: #000;
-	font-weight: bold;
-	font-size: 16px;
-}
-
-.button-color{
-	background: #145277;
-	border-bottom-left-radius: 8px;
-	border-top-right-radius: 8px;
-	font-weight: 500;
-	font-size: 14px;
-} */
 
 ul{
 	display: inline-flex;
@@ -415,22 +349,6 @@ ul > li{
 	text-align: center;
 
 }
-
-body.profile{
-	background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.8)), url('https://d2kq0urxkarztv.cloudfront.net/61aebc13a1c6b80033b4ca38/3348111/upload-fbf24392-cc2a-48bc-9003-888985992455.jpg?e=webp');
-	background-position: center;
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-attachment: fixed;
-	
-
-}
-  /* #items-container1 {
-	margin-bottom: 20px;
-    display: flex;
-    align-items: left;
-  } */
-
 .crumb {
 	margin-right: 2em;
 	display: inline;

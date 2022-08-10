@@ -4,7 +4,7 @@ const cors = require("cors");
 const baseURL = "https://localhost:4444"
 const app = express();
 const port = 4444
-const{getItems, getList, addToWantedList, removeFromWantedList, postDate} = require('./controller.js')
+const{getItems, getList, getEvent, addToWantedList, removeFromWantedList, postEvent} = require('./controller.js')
 app.use(cors());
 
 app.use(express.json());
@@ -17,21 +17,13 @@ app.get('/node_modules/axios/dist/axios.min.js', function(req, res){
     res.sendFile(path.join(__dirname, '../node_modules/axios/dist/axios.min.js'))
 })
 
-// app.get('/api/items', (req, res) => {
-//     try {
-//         res.status(200).send(items)
-//     } catch (error) {
-//         console.log('ERROR GETTING ITEMS', error)
-//         res.sendStatus(400)
-//     }
-// })
-
-
 app.get(`/api/items`, getItems)
 app.get(`/api/list`, getList)
+app.get(`/api/events`, getEvent)
 app.post(`/api/wantedlist/add`, addToWantedList)
-app.delete (`/api/wantedlist/remove`,removeFromWantedList)
-app.post(`api/dates`,postDate)
+app.post(`/api/events`,postEvent)
+app.delete (`/api/wantedlist/remove/:id`,removeFromWantedList)
+
 
 
 app.listen(4444, () => console.log("Server running on 4444"));

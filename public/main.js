@@ -5,7 +5,7 @@ const errCallback = err => console.log(err)
 const form = document.querySelector('form')
 const itemsContainer = document.querySelector('#items-container')
 const wantedContainer = document.querySelector('#wanted-container')
-const datesContainer = document.querySelector('#dates-container')
+const eventsContainer = document.querySelector('#events-container')
 
 
 const getItems = () => {
@@ -88,7 +88,7 @@ function removeFromList(id){
     const data ={
         id:id
     }
-    axios.delete(`${baseURL}/api/wantedlist/remove`, data)
+    axios.delete(`${baseURL}/api/wantedlist/remove/${id}`)
     .then((res)=>{
             document.getElementById(`item-card-${id}`).remove()
             console.log(res.data)
@@ -98,14 +98,15 @@ function removeFromList(id){
 
 let dates = []
 
-// function createDateCard(date){
-//     console.log(date)
-//     const dateCard = document.createElement('div')
-//     dateCard.classList.add('date-card')
-//     dateCard.innerHTML = `<p class="occassion">${date.occassion}</p>
-//     <p class="date">${date.date}</p>`
-    
-// }
+function createEventCard(event){
+    console.log(event)
+    const eventCard = document.createElement('div')
+    eventCard.classList.add('event-card')
+    eventCard.innerHTML = `<p class="occassion">${event.occassion}</p>
+    <p class="date">${event.date}</p>`
+
+    eventsContainer.appendChild(eventCard)
+}
 
 
 // function submitHandler(e){
@@ -143,10 +144,10 @@ let dates = []
 
 
 
-const addDateBtn = document.getElementById("add-date-btn")
+const addEventBtn = document.getElementById("add-event-btn")
 
 
-const datesCallback = ({data : posts}) => displayDates(posts)
+const eventsCallback = ({data : events}) => displayEvents(events)
 
 // function displayDates(arr) {
 //     itemsContainer.innerHTML = ``
@@ -154,17 +155,31 @@ const datesCallback = ({data : posts}) => displayDates(posts)
 //         createDateCard(arr[i])
 //     }
 // }
+const getEvent = () => {
+    axios
+    .get(`${baseURL}/api/events`)
+    .then((res)=> {
+        console.log(res.data);
+        displayEvents(res.data);   
+    })
+    .catch((err) => console.log(err));
+ };
 
-const displayDates = (date) => {
-    const showDate = document.createElement("h3")
-        showDate.textContent = date
-        datesContainer.appendChild(showDate)
+// const displayEvents = (event) => {
+//     const showEvent = document.createElement("h3")
+//         showEvent.textContent = date
+//         datesContainer.appendChild(showEvent)
+// }
+function displayEvents(arr) {
+    eventsContainer.innerHTML = ``
+    for (let i = 0; i < arr.length; i++){
+        createEventCard(arr[i])
+    }
 }
 
 
-
-const postItem = body => {
-    axios.post(`${baseURL}/api/dates`, body)
+const postEvent = body => {
+    axios.post(`${baseURL}/api/events`, body)
     .then (res => {
         const data = res.data;
         console.log(data);
@@ -175,8 +190,8 @@ const postItem = body => {
 function submitHandler(e) {
     e.preventDefault()
 
-    let occassion = document.getElementById('occassion')
-    let date = document.getElementById('date')
+    let occassion = document.querySelector('#occassion')
+    let date = document.querySelector('#date')
   
 
     let body = {
@@ -184,9 +199,9 @@ function submitHandler(e) {
         date: date.value
     }
 
-    postItem(body)
-        occassion.value = ""
-        date.value = ""
+    postEvent(body)
+        occassion.value = ''
+        date.value = ''
        
 }
 
