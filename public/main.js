@@ -38,7 +38,8 @@ function displayItems(arr) {
 }
 getItems();
 
-let list = [];
+// let list = [];
+
 const getList = () => {
     axios
     .get(`${baseURL}/api/list`)
@@ -67,7 +68,7 @@ function createWantedCard(item){
     <p class="price" style="color:#fff;">${item.price}</p>
     <button class="item-btn" style="background-color:#83D0CB; border: solid 2px #000; font-family: Carbon;" onclick="removeFromList(${item.id})">REMOVE FROM LIST</button>
     `
-    itemCard.setAttribute("id", `item-card-${item.id}`)
+    itemCard.setAttribute('id', `item-card-${item.id}`)
     wantedContainer.appendChild(itemCard)
 }
 
@@ -85,9 +86,9 @@ function addToList(id){
 
 // REMOVE ITEMS FROM LIST
 function removeFromList(id){
-    const data ={
-        id:id
-    }
+    // const data ={
+    //     id:id
+    // }
     axios.delete(`${baseURL}/api/wantedlist/remove/${id}`)
     .then((res)=>{
             document.getElementById(`item-card-${id}`).remove()
@@ -95,8 +96,8 @@ function removeFromList(id){
         })
         .catch(err => console.log(err))       
 }
-
-let dates = []
+// item-card-${id} <---- Is this right?!
+// let dates = []
 
 function createEventCard(event){
     console.log(event)
@@ -109,52 +110,12 @@ function createEventCard(event){
 }
 
 
-// function submitHandler(e){
-//     e.preventDefault()
-//     let occassion = document.querySelector('#occassion')
-//     let date = document.querySelector('#date')
-
-//     let body = {
-//         occassion: occassion.value,
-//         date: date.value
-//     }
-
-//     postDate(body)
-//         occassion.value =''
-//         date.value = ''
-// }
-
-// const postDate = () => {
-//     let body = {
-//         occassion: occassion.value,
-//         date: date.value
-//     }
-
-//     axios.post(`${baseURL}/api/date/add`, body)
-//     .then((res)=>{
-//         console.log(res.data);
-//         occassion.value = ``
-//         date.value = ``
-//         createDateCard(res.data)
-// })
-//     .catch(err => console.log(err))
-// }
-
-// //////////
+// const addEventBtn = document.getElementById("add-event-btn")
 
 
+// const eventsCallback = ({data : events}) => displayEvents(events)
 
-const addEventBtn = document.getElementById("add-event-btn")
 
-
-const eventsCallback = ({data : events}) => displayEvents(events)
-
-// function displayDates(arr) {
-//     itemsContainer.innerHTML = ``
-//     for (let i = 0; i < arr.length; i++){
-//         createDateCard(arr[i])
-//     }
-// }
 const getEvent = () => {
     axios
     .get(`${baseURL}/api/events`)
@@ -165,13 +126,9 @@ const getEvent = () => {
     .catch((err) => console.log(err));
  };
 
-// const displayEvents = (event) => {
-//     const showEvent = document.createElement("h3")
-//         showEvent.textContent = date
-//         datesContainer.appendChild(showEvent)
-// }
 function displayEvents(arr) {
-    eventsContainer.innerHTML = ``
+    console.log(eventsContainer.children)
+    while(eventsContainer.children.length > 1) {eventsContainer.removeChild(eventsContainer.lastChild)}
     for (let i = 0; i < arr.length; i++){
         createEventCard(arr[i])
     }
@@ -182,7 +139,7 @@ const postEvent = body => {
     axios.post(`${baseURL}/api/events`, body)
     .then (res => {
         const data = res.data;
-        console.log(data);
+        displayEvents(data);
     });
 }
 
@@ -211,55 +168,7 @@ form.addEventListener('submit', submitHandler)
 // WANTED LIST ARRAY
 
 
-// // // // // ADD TO LIST 
 
-// function addToList(id){
-//     // check if item already exists in user's wanted list
-//  if(list.some((product) => product.id === id)){
-//         alert("Item already in list!")
-//     } else{
-//     // console.log(id);
-//     const product = items.find((item) => item.id === id)
-//     // console.log(product)
-//     list.push(product);
-//     // Future implementation of ranking list items
-//     // list.push({
-//     //     //destructure
-//     //     ...product,
-//     //     rankingNumber: 1,
-//     // });
-//     // console.log(list);
-// }
-
-// updateList();
-// }1
-
-// addToList();
-
-// // update list
-// function updateList(){
-//     renderListItems();
-
-// }
-// //////// NEW LINES OF CODE /////////
-
-// function renderListItems(){
-//     wantedContainer.innerHTML = ""; //clear list element
-//     wantedList.forEach((item)=> {
-//         wantedContainer.innerHTML += `<img alt='${item.name}' src=${item.imgURL} class="item-image"/>
-//         <p class="name" style="color:#fff;">${item.name}</p> 
-//         <p class="price" style="color:#fff;">${item.price}</p>
-//         <button class="item-btn" style="background-color:#83D0CB; border: solid 2px #000; font-family: Carbon;" onclick="removeFromList(${item.id})">REMOVE FROM LIST</button>
-//         `})
-// }
-
-// // render list items
-// function renderListItems(){
-//     list.forEach(() =>)
-// }
-
-
-// end of this code
 
 
 
