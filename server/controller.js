@@ -4,7 +4,7 @@ const items = [
     name: "Balenciaga Bag",
     imgURL:
       "https://cdn.theninesfashion.com/wp-content/uploads/2022/07/EM3-White-Le-Cagole-XS-Shoulder-Bag-Balenciaga.png",
-    price: "$2,300",
+    price: "$2300",
   },
 
   {
@@ -12,7 +12,7 @@ const items = [
     name: "Cartier Sunglasses",
     imgURL:
       "https://editorialist.com/webcompressed/2021/6/014/479/018/14479018~goldensilver_0.png",
-    price: "$1,700",
+    price: "$1700",
   },
 
   {
@@ -61,7 +61,7 @@ const items = [
     name: "Diamond Necklace",
     imgURL:
       "https://cdn.shopify.com/s/files/1/0252/8372/3345/products/RadiantHeartSet_1_800x.png?v=1609032042",
-    price: "$5,000",
+    price: "$5000",
   },
   {
     id: 9,
@@ -75,14 +75,14 @@ const items = [
     name: "Canada Goose Jacket",
     imgURL:
       "https://images.canadagoose.com/image/upload/w_480,c_scale,f_auto,q_auto:best/v1631646972/product-image/3802LA_439_o.png",
-    price: "$1,550",
+    price: "$1550",
   },
   {
     id: 11,
     name: "Canada Goose Jacket",
     imgURL:
       "https://cdn.shopify.com/s/files/1/1037/5246/products/Scout-atomic-6.png?v=1603223389&width=1445",
-    price: "$1,550",
+    price: "$1550",
   },
   {
     id: 12,
@@ -102,14 +102,14 @@ const items = [
     name: "RIMOWA Suitcase",
     imgURL:
       "https://images.prestigeonline.com/wp-content/uploads/sites/8/2021/03/30184555/Original_Cabin_Mars_1-1024x1024.png",
-    price: "$1,400",
+    price: "$1400",
   },
   {
     id: 15,
     name: "Travis Scott Dunk Low",
     imgURL:
       "https://image.goat.com/1000/attachments/product_template_pictures/images/032/437/341/original/585882_00.png.png",
-    price: "$2,100",
+    price: "$2100",
   },
   {
     id: 16,
@@ -130,14 +130,14 @@ const items = [
     name: "iPhone 13 Pro Max",
     imgURL:
       "https://cdn.tmobile.com/content/dam/t-mobile/en-p/cell-phones/apple/Apple-iPhone-13-Pro-Max/Sierra-Blue/Apple-iPhone-13-Pro-Max-Sierra-Blue-frontimage.png",
-    price: "$1,100",
+    price: "$1100",
   },
   {
     id: 19,
     name: "MacBook",
     imgURL:
       "https://support.apple.com/library/content/dam/edam/applecare/images/en_US/macbookpro/macbook-pro-13-in-M2-2022.png",
-    price: "$2,099",
+    price: "$2099",
   },
   {
     id: 20,
@@ -146,12 +146,12 @@ const items = [
       "https://d13o3tuo14g2wf.cloudfront.net/thumbnails%2Flarge%2F_default_upload_bucket%2FWH1000XM4S_0000_001_c837e2d6c39f74d4dd2338ada3dac203.png_1.png.png?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9kMTNvM3R1bzE0ZzJ3Zi5jbG91ZGZyb250Lm5ldC90aHVtYm5haWxzJTJGbGFyZ2UlMkZfZGVmYXVsdF91cGxvYWRfYnVja2V0JTJGV0gxMDAwWE00U18wMDAwXzAwMV9jODM3ZTJkNmMzOWY3NGQ0ZGQyMzM4YWRhM2RhYzIwMy5wbmdfMS5wbmcucG5nIiwiQ29uZGl0aW9uIjp7IkRhdGVMZXNzVGhhbiI6eyJBV1M6RXBvY2hUaW1lIjoyMTQ1NzYyMDAwfX19XX0_&Signature=I2mIGJwq9f4RGGO0V67ujV5IQoBZrY5qD5Wl3jcIsnEilflP82MACO0072lS90Ge4dF2AhCmGaf~gjYzOEphCNFnxwLRpyTWQJBgrVqLbXJQtKHxs1MPnoyTP6lhT~qtYv4-yug6TBKfQh~ihnsLYkOzBXOijaQHEFflplekieJbvkIZro~DECEme-RzmCFOMPqt~NobZYYbNarZFIqmv~FVM-Wq2OyC9dCUseFOfFq3t0NYIBGdx7LXMmDioL56DzXNPEsR665MKcQNEdvnaeoQ-h9kOoP4B6TIvCoJO4rXmvW~ml2yov4wwfJ73JwFfyF6nPJoQIcpWf8RC4vFsw__&Key-Pair-Id=K37BLT9C6HMMJ0",
     price: "$244",
   },
-//   {
-//       id: 21,
-//       name:`Men's Winter Jacket`,
-//       imgURL: 'https://litium.didriksons.com/api/media/image/185b25f5-8e2d-454b-9a61-dd4234407002?maxHeight=1200',
-//       price: '$200'
-//   },
+  //   {
+  //       id: 21,
+  //       name:`Men's Winter Jacket`,
+  //       imgURL: 'https://litium.didriksons.com/api/media/image/185b25f5-8e2d-454b-9a61-dd4234407002?maxHeight=1200',
+  //       price: '$200'
+  //   },
   {
     id: 22,
     name: "Ring",
@@ -184,7 +184,7 @@ const items = [
     name: "Dior Bag",
     imgURL:
       "https://api.platforme.com/api/compose?brand=dior&model=book_tote&version=269&p=base:embroidery:m1286zriwm928&size=718&initials=&logic=1",
-    price: "$3,500",
+    price: "$3500",
   },
   {
     id: 27,
@@ -212,14 +212,14 @@ const items = [
     name: "ATV",
     imgURL:
       "https://www.brp-world.com/content/brp-world/en_int/brands/can-am-off-road/experience/all-terrain-vehicles/_jcr_content/root/helperblock_14728411.coreimg.png/1628896171183/orv-atv-my22-can-am-outlander-xt-570-oxford-blue-sku0002una00-34fr-na.png?imwidth=2048",
-    price: "$1,700",
+    price: "$1700",
   },
   {
     id: 31,
     name: "Bracelet",
     imgURL:
       "https://www.harpersbazaararabia.com/public/styles/square/public/images/2018/12/19/1793308.png.adapt.535.535.png?DI5roSCR",
-    price: "$4,000",
+    price: "$4000",
   },
   {
     id: 32,
@@ -240,7 +240,7 @@ const items = [
     name: "Golf Club Set",
     imgURL:
       "https://hips.hearstapps.com/vader-prod.s3.amazonaws.com/1614712606-juniors-2018-xt-10-piece-set_2___2.png",
-    price: "$1,500",
+    price: "$1500",
   },
   {
     id: 35,

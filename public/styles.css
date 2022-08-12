@@ -309,24 +309,24 @@ body.wishlist {
   align-items: center;
   flex-wrap: wrap;
   max-height: 1000px; */
-  /* justify-content: center;
+/* justify-content: center;
   justify-content: flex-start;
   overflow: scroll;
   width: 98%;
 } */
 
 #wanted-container {
-    margin: auto;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    max-height: 1000px;
-    justify-content: center;
-    overflow: scroll;
-    flex: 0 1 auto;
-    width: 92%;
-	min-width: 1100px;
+  margin: auto;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  max-height: 1000px;
+  justify-content: center;
+  overflow: scroll;
+  flex: 0 1 auto;
+  width: 92%;
+  min-width: 1100px;
 }
 #events-container {
   display: flex;
@@ -391,7 +391,6 @@ body.wishlist {
   text-transform: uppercase;
   text-align: center;
   padding-top: 5%;
-  letter-spacing: 0.8px;
 }
 
 .price {
@@ -486,8 +485,7 @@ body.wishlist {
   padding-top: 5%;
   color: white;
   text-decoration: underline;
-  text-shadow:0 0 1px #000;
-  
+  text-shadow: 0 0 1px #000;
 }
 .date {
   font-family: Carbon;
@@ -496,7 +494,7 @@ body.wishlist {
   text-align: center;
   padding-top: 5%;
   color: white;
-  text-shadow:0 0 1px #000;
+  text-shadow: 0 0 1px #000;
 }
 
 form.add-date-btn {

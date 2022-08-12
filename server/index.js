@@ -16,7 +16,6 @@ app.use(cors());
 
 app.use(express.json());
 
-
 app.use(express.static(path.join(__dirname, "./../public")));
 app.get("/", function (req, res) {
   res.sendFile(path.join(__dirname, "../public/enter.html"));
@@ -31,8 +30,6 @@ app.get(`/api/events`, getEvent);
 app.post(`/api/wantedlist/add`, addToList);
 app.post(`/api/events`, postEvent);
 app.delete(`/api/wantedlist/remove/:id`, removeFromList);
-// app.delete (`/api/wantedlist/remove`,removeFromWantedList)
 
-// app.listen(4444, () => console.log("Server running on 4444"));
-const port = process.env.PORT || 4444
-app.listen(port, () => console.log(`up on ${port}`))
+const port = process.env.PORT || 4444;
+app.listen(port, () => console.log(`up on ${port}`));

@@ -1,6 +1,5 @@
 const baseURL = `http://localhost:4444`;
 const itemsCallback = ({ data: items }) => displayItems(items);
-// const datesCallback = ({data: dates}) => displayCards(dates)
 const errCallback = (err) => console.log(err);
 const form = document.querySelector("form");
 const itemsContainer = document.querySelector("#items-container");
@@ -36,8 +35,6 @@ function displayItems(arr) {
   }
 }
 getItems();
-
-// let list = [];
 
 const getList = () => {
   axios
@@ -85,9 +82,6 @@ function addToList(id) {
 
 // REMOVE ITEMS FROM LIST
 function removeFromList(id) {
-  // const data ={
-  //     id:id
-  // }
   axios
     .delete(`${baseURL}/api/wantedlist/remove/${id}`)
     .then((res) => {
@@ -96,8 +90,6 @@ function removeFromList(id) {
     })
     .catch((err) => console.log(err));
 }
-
-// let dates = []
 
 function createEventCard(event) {
   console.log(event);
@@ -155,5 +147,3 @@ function submitHandler(e) {
 }
 
 form.addEventListener("submit", submitHandler);
-
-// WANTED LIST ARRAY
