@@ -207,7 +207,7 @@ body.wishlist {
 }
 #span {
   font-family: AstralDelight;
-  font-size: 5em;
+  font-size: 4rem;
   display: inline-block;
   color: #fff;
   text-align: center;
@@ -460,7 +460,8 @@ body.wishlist {
 
 .event-card {
   /* border: solid 3px #55ADED; */
-  background-color: #83d0cb;
+  border: 3px solid #477adf;
+  background-color: #83d0cbbc;
   background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3));
   width: 300px;
   margin: 10px;
@@ -472,6 +473,7 @@ body.wishlist {
   border-top-left-radius: 8px;
   border-bottom-right-radius: 8px;
   padding: 1%;
+  height: 30%;
   /* flex-wrap: wrap; */
   /* display: inline-flex; */
   /* overflow: auto; */
@@ -482,8 +484,10 @@ body.wishlist {
   text-transform: uppercase;
   text-align: center;
   padding-top: 5%;
-  color: #fff;
+  color: white;
   text-decoration: underline;
+  text-shadow:0 0 1px #000;
+  
 }
 .date {
   font-family: Carbon;
@@ -492,6 +496,7 @@ body.wishlist {
   text-align: center;
   padding-top: 5%;
   color: white;
+  text-shadow:0 0 1px #000;
 }
 
 form.add-date-btn {
