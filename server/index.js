@@ -16,13 +16,13 @@ app.use(cors());
 
 app.use(express.json());
 
-app.use(express.static(path.join(__dirname, "./../public")));
+app.use(express.static("public"));
 app.get("/", function (req, res) {
   res.sendFile(path.join(__dirname, "../public/enter.html"));
 });
-app.get("/node_modules/axios/dist/axios.min.js", function (req, res) {
-  res.sendFile(path.join(__dirname, "../node_modules/axios/dist/axios.min.js"));
-});
+// app.get("/node_modules/axios/dist/axios.min.js", function (req, res) {
+//   res.sendFile(path.join(__dirname, "../node_modules/axios/dist/axios.min.js"));
+// });
 
 app.get(`/api/items`, getItems);
 app.get(`/api/list`, getList);
