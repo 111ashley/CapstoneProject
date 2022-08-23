@@ -11,7 +11,7 @@ const items = [
     id: 2,
     name: "Cartier Sunglasses",
     imgURL:
-      "https://editorialist.com/webcompressed/2021/6/014/479/018/14479018~goldensilver_0.png",
+      "https://www.en.cartier.com/content/dam/rcq/car/21/09/63/0/2109630.png",
     price: "$1700",
   },
 
