@@ -6,6 +6,22 @@
   font-weight: 100;
   box-sizing: border-box;
 }
+
+@font-face {
+  font-family: 'seeingstars';
+  src: url(.fonts/SEEIS___.TTF) format('truetype');
+}
+
+@font-face {
+  font-family: 'AstralDelight';
+  src: url(.fonts/AstralDelight.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Carbon';
+  src: url(.fonts/carbon.ttf) format('truetype');
+}
+
 body {
   height: 100%;
 }
@@ -216,19 +232,7 @@ body.wishlist {
 #span::first-letter {
   font-family: seeingstars;
 }
-/* .topnav{
-	z-index: 1;
-	display: flex;
-    font-size: 50px;
-    font-weight: bold;
-	top: 0;
-	justify-content:space-between ;
-	height: 80px;
-	width:100%;
-	padding: 0 50px;
-	max-width: 1300px;
-	margin: 0 auto;
-} */
+
 .navbar-div {
   position: -webkit-sticky;
   position: sticky;
