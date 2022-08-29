@@ -8,7 +8,7 @@ const eventsContainer = document.querySelector("#events-container");
 
 const getItems = () => {
   axios
-    .get(`${baseURL}/api/items`)
+    .get(`/api/items`)
     .then((res) => {
       console.log(res.data);
       displayItems(res.data);
