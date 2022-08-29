@@ -9,17 +9,17 @@
 
 @font-face {
   font-family: 'seeingstars';
-  src: url('https://sincerely-app.herokuapp.com/fonts/SEEIS___.TTF') format('truetype');
+  src: font-url('https://sincerely-app.herokuapp.com/fonts/SEEIS___.TTF') format('truetype');
 }
 
 @font-face {
   font-family: 'AstralDelight';
-  src: url('https://sincerely-app.herokuapp.com/fonts/AstralDelight.ttf') format('truetype');
+  src: font-url('https://sincerely-app.herokuapp.com/fonts/AstralDelight.ttf') format('truetype');
 }
 
 @font-face {
   font-family: 'Carbon';
-  src: url('https://sincerely-app.herokuapp.com/fonts/carbon.ttf') format('truetype');
+  src: font-url('https://sincerely-app.herokuapp.com/fonts/carbon.ttf') format('truetype');
 }
 
 body {
